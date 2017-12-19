@@ -41,7 +41,7 @@ class SpaceObject:
         self.sprite = pyglet.sprite.Sprite(image, batch=batch)
         self.update_sprite()
 
-        # register the ship to the global list of game objects
+        # register the object to the global list of game objects
         objects.append(self)
 
     def update_sprite(self):
@@ -66,6 +66,7 @@ class SpaceObject:
 
         # finally, apply the changes to the sprite
         self.update_sprite()
+
 
 
 class SpaceShip(SpaceObject):
@@ -125,6 +126,10 @@ class Asteroid(SpaceObject):
         super().tick(dt)
 
 
+
+
+
+
 # main window
 window = pyglet.window.Window()
 
@@ -137,6 +142,9 @@ for _ in range(8):
 
 
 # Pyglet objects and functions
+
+
+
 def draw_all_objects():
     """For all objects, draw theirs sprites"""
     window.clear()
